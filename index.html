@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ishan Purohit Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Ishan Purohit</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png); background-size: 80%; background-position: center;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Ishan Purohit</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data-Scientist  ',
+						'Machine Learning Engineer  ',
+						'Computer Vision Engineer',
+						'YouTuber',
+						'Philosopher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Self-Taught Data-Scientist</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.kaggle.com/ishanpurohit" class="btn btn-primary py-3 px-4">Kaggle</a> 
+							<a href="https://github.com/cosmicishan" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about_me.jpg" class="img-fluid b-shadow-a" alt="" style="border-radius: 50%; width: 350px; height: 150px; object-fit: cover;">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <!-- <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+									  </div> -->
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<br><br>
+									<h1 class="title-s">Skills</h1>
+									<br>
+									<span>Data Science</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Machine Learning</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Computer Vision</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Natural Language Processing</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Backend Development</span> <span class="pull-right">30%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>API Development</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>As a self-learner with a passion for the field of Data Science and Machine Learning, I have acquired a wealth of knowledge and skills through a diverse range of online resources. My interest in exploring the latest advancements and trends in the industry has allowed me to develop a strong foundation in Machine Learning, which I have honed through various personal projects. I am particularly drawn to deep learning, computer vision, and reinforcement learning, and I have gained extensive experience in these domains.<br><br>
+
+									I am constantly seeking new challenges and opportunities to apply my knowledge and skills to solve complex problems in these domains. To me, there is nothing more satisfying than seeing a model I have trained perform well on a task, whether it be identifying objects in an image or making intelligent decisions in a game environment. My passion for these fields continues to drive me forward, and I am excited to see where my journey takes me next.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li><br>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Science in Data Science and Application</span></li><br>
+									<li class="d-flex"><span>Programming Languages:</span> <span>Python, Java, Javascript</span></li><br>
+									<li class="d-flex"><span>Software & Tools:</span> <span>Ubuntu, Google Colab, Jupyter Notebook, Anaconda, Android Studio, Shell Script</span></li><br>
+									<li class="d-flex"><span>Libraries & Frameworks:</span> <span>Numpy, Pandas, Matplotlib, Scikit-learn, Seaborn, Pytorch, Tensorflow, Langchain, OpenCV,
+										Fast.ai, FastAPI, Django, Flask</span></li> <br>
+									<li class="d-flex"><span>Interest:</span> <span>Philosophy, Spirituality, Mental-Health, Poetry and Story-Writing</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="34">0</span> <span>+</span>
+									<span>&nbsp; Repositories</span>
+								</p>
+								<p><a href="https://github.com/cosmicishan?tab=repositories" class="btn btn-primary py-3 px-3">Github</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Results-driven Data Science and Machine Learning enthusiast with a strong foundation in machine learning
+				algorithms, deep learning, computer vision, and natural language processing (NLP). Highly proficient in developing AI-driven solutions for image recognition, object detection. Proven experience in leading projects and
+				hackathons, solving real-world problems through data-driven insights and cutting-edge technology.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Publications</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row d-flex">
+			<!-- Publication Section -->
+			<div class="col-md-12 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<span class="date">Contribution in AllenAI</span>
+					<h4>April 2022</h4>
+					<ul>
+						<li>Contributed to the open-source project of AllenAI by building datasets that support the development of next-generation AI/NLP models.</li>
+						<li>Introduced Super-NaturalInstructions, a benchmark of 1,616 diverse NLP tasks with expert-written instructions, covering 76 distinct task types.</li>
+						<li>The collection enables rigorous benchmarking of cross-task generalization under instructions, training models on a subset of tasks and evaluating them on unseen tasks.</li>
+					</ul>
+					<a href="https://arxiv.org/abs/2204.07705" target="_blank">View the paper on Arxiv</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+			<!-- First Internship Experience (Snapfix) -->
+			<div class="col-md-6 d-flex">
+			  <div class="resume-wrap ftco-animate w-100">
+				<!-- Position -->
+				<span class="position" style="font-size: 20px; font-weight: bold; color: #f4fa9c;">Data Science and Machine Learning Internship</span>
+				<!-- Company Name -->
+				<h2 style="font-size: 24px;">Snapfix</h2>
+				<!-- Date -->
+				<span style="font-size: 18px; color: #ffffff;">December 2022 - May 2023</span>
+				<p class="mt-4">
+				  Snapfix is the simplest maintenance platform on the planet. Make maintenance easier with this streamlined system of photos & traffic lights that everyone can use.
+				  <ul>
+					<li>Gained foundational knowledge in data science during an internship at SnapFix Technology, focusing on artificial intelligence, machine learning, and deep learning.</li>
+					<li>Received comprehensive insights into key areas of data science under the guidance of experienced professionals, enhancing technical expertise.</li>
+					<li>Started the internship with an overview of essential tools used in data science development, laying the groundwork for understanding the technological landscape.</li>
+				  </ul>
+				</p>
+			  </div>
+			</div>
+		  
+			<!-- Second Internship Experience (IIT Patna) -->
+			<div class="col-md-6 d-flex">
+			  <div class="resume-wrap ftco-animate w-100">
+				<!-- Position -->
+				<span class="position" style="font-size: 20px; font-weight: bold; color: #f4fa9c;">Annotation and Model Building of Indian Land Cover</span>
+				<!-- Company Name -->
+				<h2 style="font-size: 24px;">Indian Institute of Technology, Patna</h2>
+				<!-- Date -->
+				<span style="font-size: 18px; color: #ffffff;">December 2022 - May 2023</span>
+				<p class="mt-4">
+				  Completed a research internship at the Indian Institute of Technology, Patna, focusing on land cover classification and model development using satellite imagery.
+				  <ul>
+					<li>Conducted research internship under Dr. Chandranath Adak, focusing on annotation and model development for land cover classification in India.</li>
+					<li>Performed meticulous pixel-level annotation of land cover classes in satellite imagery, ensuring high-quality ground-truth data for model training.</li>
+					<li>Developed a robust model to classify and map diverse land cover types across India, leveraging annotated datasets for accurate predictions.</li>
+				  </ul>
+				</p>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <!-- Third Internship Experience (MICA) Centered in the Next Row -->
+		  <div class="row justify-content-center">
+			<div class="col-md-6 d-flex">
+			  <div class="resume-wrap ftco-animate w-100">
+				<!-- Position -->
+				<span class="position" style="font-size: 20px; font-weight: bold; color: #f4fa9c;">Big Data Analyst</span>
+				<!-- Company Name -->
+				<h2 style="font-size: 24px;">MICA | The School of Ideas · Internship</h2>
+				<!-- Date -->
+				<span style="font-size: 18px; color: #ffffff;">April 2021 - June 2021</span>
+				<p class="mt-4">
+				  MICA is a premier institution in India specializing in strategic marketing and communication.
+				  <ul>
+					<li>Developed an end-to-end pipeline to extract relevant information from academic lectures.</li>
+					<li>Implemented and evaluated various Speech-to-Text APIs to generate accurate transcriptions of lecture content.</li>
+					<li>Focused on data cleaning and processing to refine and structure the transcribed text for further analysis.</li>
+				  </ul>
+				</p>
+			  </div>
+			</div>
+		  </div>
+		  
+		  
+		  
+		  
+		  
+		  
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row d-flex">
+			<!-- First Section - Bachelor of Science -->
+			<div class="col-md-6 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<span class="date">2024-2028</span>
+					<h2>BS. in Data Science and Application</h2>
+					<span class="position">Indian Institute of Technology, Madras</span>
+					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+				</div>
+			</div>
+		
+			<!-- Second Section - Diploma in Information Technology -->
+			<div class="col-md-6 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<span class="date">2021-2024</span>
+					<h2>Diploma in Information Technology</h2>
+					<span class="position">Government Polytechnic Rajkot</span>
+					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<h1 class="big-4">Achievements</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+		<div class="row d-flex flex-column">
+			<!-- Achievement 1 -->
+			<div class="col-md-12 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<h2>
+						<a href="https://www.linkedin.com/posts/ishan-purohit-355a3216b_i-had-the-incredible-opportunity-to-guest-activity-7262457422022115328-McM9?utm_source=share&utm_medium=member_desktop">Guest Lecture as an Expert Speaker</a>
+					</h2>
+					<span class="position">Took Lecture on Artificial Intelligence and Machine Learning in Dotenv Community.</span>
+				</div>
+			</div>
+			<!-- Achievement 2 -->
+			<div class="col-md-12 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<h2>
+						<a href="https://drive.google.com/file/d/1wSdCC5K_R7DyIOsinCDx5HmE2sYgv4R-/view">Gesture Lingo Grant</a>
+					</h2>
+					<span class="position">Awarded a grant of ₹15,600 by SSIP for the Gesture Lingo project.</span>
+				</div>
+			</div>
+			<!-- Achievement 3 -->
+			<div class="col-md-12 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<h2>
+						<a href="https://drive.google.com/file/d/12hsKMtoGpAseiETxo9fFtFonoIdSqRCW/view">1st Runner-Up - Relay Coding</a>
+					</h2>
+					<span class="position">Secured 1st Runner-Up position in the Relay Coding Competition at RK University.</span>
+				</div>
+			</div>
+			<!-- Achievement 4 -->
+			<div class="col-md-12 d-flex">
+				<div class="resume-wrap ftco-animate w-100">
+					<h2>
+						<a href="https://www.kaggle.com/code/ishanpurohit/top-5-solution-with-detailed-explanation">Top 5% in Spaceship Titanic Competition</a>
+					</h2>
+					<span class="position">Achieved a top 5% rank in the Kaggle competition with detailed insights showcased.</span>
+				</div>
+			</div>
+		</div>
+		
+		
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/drive/folders/1uPP3yo0_u6V80ASBIWNztgfJPqnhexpj?usp=drive_link" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Recent Projects I done</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/cosmicishan/SurfaceScout-1" class="block-20 zoom-effect" style="background-image: url('images/proj_1.webp'); background-size: contain;">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/cosmicishan/SurfaceScout-1">SurfaceScout</a></h3>
+                <p>This project, developed for the Synapse'24 Hackathon at DA-IICT, presents a web application that combines a pre-trained Vision Transformer (ViT) model for lunar surface classification with an additional rock detection feature using bounding boxes. Lunar Surface Classification accepts an image and predicts its lunar surface type using a fine-tuned ViT model and identifies rocks within the lunar image and marks them with bounding boxes for visual clarity. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/cosmicishan/StaffScan" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png'); background-size: contain;">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/cosmicishan/StaffScan">Staff Scan</a></h3>
+                <p>
+				Developed an Android application for attendance management as part of the New Vibrant Hackathon 2023. The app featured robust user authentication and real-time tracking capabilities, ensuring efficient monitoring of staff attendance and participation. It streamlined attendance processes by allowing secure login, automated record-keeping, and easy retrieval of attendance data.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/cosmicishan/Face_Recognition_Attendance" class="block-20 zoom-effect" style="background-image: url('images/proj_3.webp');  background-size: contain;">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/cosmicishan/Face_Recognition_Attendance">Face Recognition Attendance</a></h3>
+                <p>This project utilizes the face recognition library to recognize faces in real-time using a webcam. The facial recognition process involves capturing facial encodings from a set of images, storing them in a pickle file, and then comparing the encoding of a live webcam feed with the stored encodings to identify the recognized person.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/cosmicishan/Hand-Sign-Detection" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png'); background-size: contain;"></a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/cosmicishan/Hand-Sign-Detection">Hand Sign Detection</a></h3>
+				  <p>Gesture Lingo is an innovative application designed to recognize and interpret five distinct sign language gestures from images, videos, and live webcam feeds. It offers a range of features to enhance accessibility and communication, including the ability to upload an image for sign language recognition, analyze gestures in video files, and perform real-time interpretation through a webcam.</p>
+				</div>
+			  </div>
+		</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://top.gg/bot/782229920716685322" class="block-20 zoom-effect" style="background-image: url('images/proj_5.webp'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://top.gg/bot/782229920716685322">Cosmic Philosopher</a></h3>
+				  <p>I built an advanced quote-generation bot designed to deliver wisdom, inspiration, and guidance from the greatest minds in history. This bot can generate quotes from Ancient Greek philosophers, modern thinkers, writers, poets, authors, and novelists. It features a unique capability to provide tailored quotes on specific topics, offering insights into emotions, mortality, fate, control, and the impermanence of life. </p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section" id="hackathon-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2" style="margin-left: -60px;">Hackathons</h1>
+					<h2 class="mb-4">Hackathons</h2>
+					<p>Below are some of the hackathons I participated in and the milestones achieved.</p>
+				</div>
+			</div>
+			<!-- Two-column section -->
+			<div class="row d-flex">
+				<div class="col-md-6 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/nasa.png'); background-size: contain; width: 100%; height: 400px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">NASA Space Apps Challenge 2024</h3>
+							<p>Led a team of 6 to build an innovative ed-tech platform for exoplanet exploration. The platform, driven entirely by AI, handled course creation, Q&A, and live teaching, offering a cutting-edge solution for global space education and exploration challenges.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/hackout.png'); background-size: contain; width: 100%; height: 400px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3>HackOut’24</h3>
+							<p>Shortlisted among 450 competing teams for our innovative approach to space exploration technology. Worked on *SurfaceScout* by deploying a Vision Transformer (ViT) model trained on the Mars dataset to classify and analyze Martian terrain effectively.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Single-column section -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/ssip.png'); background-size: contain; width: 100%; height: 400px;">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading">New India Vibrant Hackathon 2023</h3>
+							<p>Finalist in the SSIP-organized hackathon, ranking among the top 181 teams from over 1,400 participants. Led a team to develop a comprehensive platform for staff and employee attendance management, showcasing leadership and collaborative problem-solving skills.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<!-- 
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			
+		</div>
+	</section>
+ -->
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Porbandar, Gujarat, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+919998084322">+91 9998084322</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:ipurohit765@gmail.com">ipurohit765@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/drive/folders/1uPP3yo0_u6V80ASBIWNztgfJPqnhexpj?usp=drive_link">link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXjwL9gp4mi_LRRIBbjT1UmqXhsdY1TzqCTbDFA9gCO-A_Nw/viewform?usp=pp_url" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@ishanpurohit9762"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ishan-purohit-355a3216b/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/cosmic_ishan"><span class="icon-twitter"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/cosmic_ishan/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
